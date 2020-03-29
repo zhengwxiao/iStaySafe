@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3OM-Eq-T5n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3OM-Eq-T5n">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -239,11 +239,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NV-CL-Tns">
-                                <rect key="frame" x="145.5" y="349" width="123" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Reset to Default"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -252,22 +247,21 @@
                             <constraint firstItem="DcS-ag-Pnd" firstAttribute="leading" secondItem="qih-3D-cj1" secondAttribute="leading" id="B5u-5c-l9g"/>
                             <constraint firstItem="DcS-ag-Pnd" firstAttribute="top" secondItem="qih-3D-cj1" secondAttribute="bottom" constant="8" id="Luc-RC-jNZ"/>
                             <constraint firstItem="qih-3D-cj1" firstAttribute="top" secondItem="8ta-XB-J06" secondAttribute="top" constant="8" id="PI1-eK-QVq"/>
-                            <constraint firstItem="2NV-CL-Tns" firstAttribute="centerX" secondItem="DcS-ag-Pnd" secondAttribute="centerX" id="ZHf-Q3-BGX"/>
-                            <constraint firstItem="2NV-CL-Tns" firstAttribute="top" secondItem="DcS-ag-Pnd" secondAttribute="bottom" constant="8" id="aKy-pE-5H8"/>
                             <constraint firstItem="qih-3D-cj1" firstAttribute="leading" secondItem="8ta-XB-J06" secondAttribute="leading" constant="16" id="dIM-Kd-zSF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8ta-XB-J06"/>
                     </view>
                     <navigationItem key="navigationItem" title="Set Frequency" id="P5P-Ky-bEb">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="qiW-SZ-oTb"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="qiW-SZ-oTb">
+                            <connections>
+                                <action selector="setReminder:" destination="MU4-hC-Fv6" id="SGE-67-8TU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
-<<<<<<< HEAD
                     <connections>
                         <outlet property="HourPicker" destination="DcS-ag-Pnd" id="6o5-1f-bVy"/>
                         <outlet property="frequencyPickerView" destination="DcS-ag-Pnd" id="3Xo-rS-rQG"/>
                     </connections>
-=======
->>>>>>> d2b6cb648e61813877346f80edfb8f428d01f0aa
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dp9-rm-c5k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -293,6 +287,6 @@
     </scenes>
     <resources>
         <image name="DoNotTouchFace" width="25" height="25"/>
-        <image name="heart.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="heart.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>

@@ -33,6 +33,10 @@ class ReminderViewController: UIViewController, UIPickerViewDataSource, UIPicker
         return attributedString
     }
     
+    @IBAction func setReminder(_ sender: Any) {
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        delegate.notificationManager.scheduleReminders(title: "Time to Wash Your Hands!", body: "", delay: 0.1, id: "WashHandReminder")
+    }
     // You can use this function to retrieve the input from the picker
 //    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 //        label.text
