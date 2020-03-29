@@ -7,14 +7,11 @@
 //
 
 import Foundation
-
-import Foundation
 import UserNotifications
 
 class NotificationManager {
     let notificationCenter = UNUserNotificationCenter.current()
     
-    // Transferred to ExensionDelegate
     func scheduleReminders(title: String, body: String, delay: Double) {
         // notificationCenter.removeAllPendingNotificationRequests()
         

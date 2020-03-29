@@ -8,7 +8,7 @@
 
 import WatchKit
 import Foundation
-
+import UserNotifications
 
 class InterfaceController: WKInterfaceController {
     @IBOutlet weak var accelerationLabel: WKInterfaceLabel!
@@ -20,6 +20,12 @@ class InterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
+        let center = UNUserNotificationCenter.current()
+        center.getPendingNotificationRequests(completionHandler: { requests in
+            for request in requests {
+                print(request)
+            }
+        })
         // Configure interface objects here.
     }
     

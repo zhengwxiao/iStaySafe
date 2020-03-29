@@ -7,12 +7,20 @@
 //
 
 import WatchKit
+import UserNotifications
 
-class ExtensionDelegate: NSObject, WKExtensionDelegate {
+class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenterDelegate {
     let motionManager = MotionManager()
+    let notificationManager = NotificationManager()
     
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
+        
+        notificationManager.notificationCenter.delegate = self
+        
+        notificationManager.notificationCenter.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+            print("Notification authorization: \(granted)")
+        }
         
         motionManager.startDeviceMotionUpdates()
     }

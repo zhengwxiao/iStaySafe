@@ -8,52 +8,111 @@
 
 import Foundation
 import CoreMotion
+import CoreML
+import WatchKit
+
+struct ModelConstants {
+    static let numOfFeatures = 2
+    // Must be the same value you used while training
+    static let predictionWindowSize = 100
+    // Must be the same value you used while training
+    static let sensorsUpdateFrequency = 1.0 / 50.0
+    static let hiddenInLength = 20
+    static let hiddenCellInLength = 200
+}
 
 class MotionManager {
     let motionManager = CMMotionManager()
+    let faceTouch = FaceTouch()
     private var deviceMotion = Array(repeating: 0.0, count: 6)
+    let accX = try? MLMultiArray(
+        shape: [ModelConstants.predictionWindowSize] as [NSNumber],
+        dataType: MLMultiArrayDataType.double)
+    let accY = try? MLMultiArray(
+        shape: [ModelConstants.predictionWindowSize] as [NSNumber],
+        dataType: MLMultiArrayDataType.double)
+    let accZ = try? MLMultiArray(
+        shape: [ModelConstants.predictionWindowSize] as [NSNumber],
+        dataType: MLMultiArrayDataType.double)
+    let rotX = try? MLMultiArray(
+        shape: [ModelConstants.predictionWindowSize] as [NSNumber],
+        dataType: MLMultiArrayDataType.double)
+    let rotY = try? MLMultiArray(
+        shape: [ModelConstants.predictionWindowSize] as [NSNumber],
+        dataType: MLMultiArrayDataType.double)
+    let rotZ = try? MLMultiArray(
+        shape: [ModelConstants.predictionWindowSize] as [NSNumber],
+        dataType: MLMultiArrayDataType.double)
+    var currentState = try? MLMultiArray(
+        shape: [(ModelConstants.hiddenInLength +
+            ModelConstants.hiddenCellInLength) as NSNumber],
+        dataType: MLMultiArrayDataType.double)
+    var currentIndexInPredictionWindow = 0
+    let predictionWindowDataArray = try? MLMultiArray(shape: [1, ModelConstants.predictionWindowSize, ModelConstants.numOfFeatures] as [NSNumber], dataType: MLMultiArrayDataType.double)
+    var lastHiddenOutput = try? MLMultiArray(shape: [ModelConstants.hiddenInLength as NSNumber], dataType: MLMultiArrayDataType.double)
+    var lastHiddenCellOutput = try? MLMultiArray(shape: [ModelConstants.hiddenCellInLength as NSNumber], dataType: MLMultiArrayDataType.double)
+    
     
     func startDeviceMotionUpdates() {
-        if self.motionManager.isDeviceMotionAvailable {
-            self.motionManager.deviceMotionUpdateInterval = 1.0 / 50.0
-            
-            let deviceMotionHandler: CMDeviceMotionHandler = {
-                (data, error) in
-                
-                guard let data = data else { fatalError("Unable to obtain motion data.") }
-                
-                self.deviceMotion[0] = data.userAcceleration.x * 100
-                self.deviceMotion[1] = data.userAcceleration.y * 100
-                self.deviceMotion[2] = data.userAcceleration.z * 100
-                self.deviceMotion[3] = data.rotationRate.x * 100
-                self.deviceMotion[4] = data.rotationRate.y * 100
-                self.deviceMotion[5] = data.rotationRate.z * 100
-                
-                print("Acceleration\nx: \(self.deviceMotion[0])\ny: \(self.deviceMotion[1])\nz: \(self.deviceMotion[2])")
-                print("Rotation\nx: \(self.deviceMotion[3])\ny: \(self.deviceMotion[4])\nz: \(self.deviceMotion[5])")
-                
-                self.detectFaceTouch(deviceMotion: self.deviceMotion)
-            }
-            
-            motionManager.startDeviceMotionUpdates(to: OperationQueue(), withHandler: deviceMotionHandler)
+        guard motionManager.isDeviceMotionAvailable else {
+            debugPrint("Core Motion Data Unavailable!")
+            return
+        }
+        motionManager.deviceMotionUpdateInterval = ModelConstants.sensorsUpdateFrequency
+        motionManager.showsDeviceMovementDisplay = true
+        motionManager.startDeviceMotionUpdates(to: .main) { (motionData, error) in
+            guard let motionData = motionData else { return }
+            // Add motion data sample to array
+            self.addMotionDataSampleToArray(motionSample: motionData)
         }
     }
     
     func stopDeviceMotionUpdates() {
+        currentIndexInPredictionWindow = 0
         motionManager.stopDeviceMotionUpdates()
+        currentState = try? MLMultiArray(
+            shape: [(ModelConstants.hiddenInLength +
+                ModelConstants.hiddenCellInLength) as NSNumber],
+            dataType: MLMultiArrayDataType.double)
+    }
+    
+    func addMotionDataSampleToArray(motionSample: CMDeviceMotion) {
+        // Using global queue for building prediction array
+        DispatchQueue.global().async {
+            self.rotX![self.currentIndexInPredictionWindow] = motionSample.rotationRate.x as NSNumber
+            self.rotY![self.currentIndexInPredictionWindow] = motionSample.rotationRate.y as NSNumber
+            self.rotZ![self.currentIndexInPredictionWindow] = motionSample.rotationRate.z as NSNumber
+            self.accX![self.currentIndexInPredictionWindow] = motionSample.userAcceleration.x as NSNumber
+            self.accY![self.currentIndexInPredictionWindow] = motionSample.userAcceleration.y as NSNumber
+            self.accZ![self.currentIndexInPredictionWindow] = motionSample.userAcceleration.z as NSNumber
+            
+            // Update prediction array index
+            self.currentIndexInPredictionWindow += 1
+            
+            // If data array is full - execute a prediction
+            if (self.currentIndexInPredictionWindow == ModelConstants.predictionWindowSize) {
+                if let output = self.activityPrediction() {
+                    if output == "Face" {
+                        let delegate = WKExtension.shared().delegate as? ExtensionDelegate
+                        delegate?.notificationManager.scheduleReminders(title: "Don't Touch Your Face!", body: "", delay: 1)
+                    }
+                }
+                // Start a new prediction window from scratch
+                self.currentIndexInPredictionWindow = 0
+            }
+        }
     }
     
     func deviceMotionData() -> [Double] {
         return deviceMotion
     }
     
-    private func detectFaceTouch(deviceMotion: [Double]) {
-        if deviceMotion[0] < -0.1 && deviceMotion[0] > -0.03 {
-            if deviceMotion[1] < -0.01 && deviceMotion[1] > -0.001 {
-                if deviceMotion[2] < -0.1 && deviceMotion[2] > -0.002 {
-                    print("Don't touch your face!")
-                }
-            }
-        }
+    func activityPrediction() -> String? {
+        // Perform prediction
+        let modelPrediction = try? faceTouch.prediction(accX: accX!, accY: accY!, accY_1: accZ!, gyroX: rotX!, gyroY: rotY!, gyroZ: rotZ!, stateIn: currentState)
+        
+        currentState = modelPrediction?.stateOut
+        
+        return modelPrediction?.label
     }
 }
