@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3OM-Eq-T5n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3OM-Eq-T5n">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -225,7 +225,7 @@
         <!--Set Timer-->
         <scene sceneID="xcR-Bb-pAf">
             <objects>
-                <viewController id="MU4-hC-Fv6" userLabel="Set Timer" sceneMemberID="viewController">
+                <viewController id="MU4-hC-Fv6" userLabel="Set Timer" customClass="ReminderViewController" customModule="iStaySafe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XfP-7K-c9s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -261,6 +261,13 @@
                     <navigationItem key="navigationItem" title="Set Frequency" id="P5P-Ky-bEb">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="qiW-SZ-oTb"/>
                     </navigationItem>
+<<<<<<< HEAD
+                    <connections>
+                        <outlet property="HourPicker" destination="DcS-ag-Pnd" id="6o5-1f-bVy"/>
+                        <outlet property="frequencyPickerView" destination="DcS-ag-Pnd" id="3Xo-rS-rQG"/>
+                    </connections>
+=======
+>>>>>>> d2b6cb648e61813877346f80edfb8f428d01f0aa
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dp9-rm-c5k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -286,6 +293,6 @@
     </scenes>
     <resources>
         <image name="DoNotTouchFace" width="25" height="25"/>
-        <image name="heart.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="heart.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
 </document>
