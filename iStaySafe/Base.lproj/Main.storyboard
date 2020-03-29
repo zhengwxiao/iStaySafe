@@ -1,140 +1,258 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3OM-Eq-T5n">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="s3D-HL-ijV">
+            <objects>
+                <tabBarController id="3OM-Eq-T5n" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yNH-iK-R67">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="pc7-Eg-kln" kind="relationship" relationship="viewControllers" id="i9W-3L-Ytb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aUn-yA-45J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1651" y="173"/>
+        </scene>
+        <!--Guidelines-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iStaySafe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Guidelines" id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Preventing the Spread of COVID-19" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ch-Km-URg" userLabel="ViewSubtitle">
-                                <rect key="frame" x="35" y="175" width="345" height="26"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vti-JT-ZfH">
+                                <rect key="frame" x="0.0" y="44" width="414" height="1227"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="21"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SocialDistancing" translatesAutoresizingMaskIntoConstraints="NO" id="4Ag-ch-TRK">
-                                <rect key="frame" x="35" y="273" width="122" height="135"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="General Health Guidelines:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCh-gb-VIj" userLabel="ViewTitle">
-                                <rect key="frame" x="14" y="79" width="387" height="88"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="36"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Keep a distance bewteen yourself and others whenever you're not home. Avoid close contact with people who are sick." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVO-JE-I9x">
-                                <rect key="frame" x="188" y="286" width="192" height="126"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HandWash" translatesAutoresizingMaskIntoConstraints="NO" id="MSX-pO-9G9">
-                                <rect key="frame" x="35" y="497" width="122" height="135"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFv-72-gZy">
-                                <rect key="frame" x="183" y="497" width="197" height="135"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Be sure to wash your hands often, especially if you're out in a public place or have been coughing, sneezing, or blowing your nose.</string>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="When washing your hands, ensure that you use both water and soap, and wash for at least 20 seconds." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SW2-uS-hMX">
-                                <rect key="frame" x="35" y="626" width="345" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Personal Hygiene is Important!" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1f-k6-Lf4">
-                                <rect key="frame" x="210" y="455" width="170" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.91385412219999995" green="0.51091611390000002" blue="0.93337041139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Practice Social Distancing" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ah8-Cm-non">
-                                <rect key="frame" x="177" y="250" width="203" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.91385412219999995" green="0.51091611390000002" blue="0.93337041139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CoverMouth" translatesAutoresizingMaskIntoConstraints="NO" id="jGl-eX-qNo">
-                                <rect key="frame" x="35" y="742" width="140" height="148"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B97-iO-N2v">
-                                <rect key="frame" x="183" y="755" width="197" height="135"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Cover your mouth and nose with a tissue when you cough or sneeze or use the inside of your elbow. Throw used tissues in the trash.</string>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Immediately wash your hands with soap and water, and apply a hand sanitizer that contains at least 60% alcohol" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQb-Wd-bqZ">
-                                <rect key="frame" x="35" y="884" width="345" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cover Up a Sneeze/Cough" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDM-Ks-6gE">
-                                <rect key="frame" x="178" y="733" width="202" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.91385412219999995" green="0.51091611390000002" blue="0.93337041139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MedicalMask" translatesAutoresizingMaskIntoConstraints="NO" id="UEa-95-ZDk">
-                                <rect key="frame" x="35" y="1014" width="140" height="135"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6M-Xh-Z6i">
-                                <rect key="frame" x="183" y="1014" width="197" height="135"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">If you're showing symptom or think you may be sick, wear a mask! This is important because it helps prevent rapid spread of the virus.</string>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wear a Face Mask" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIx-G2-HnX">
-                                <rect key="frame" x="241" y="992" width="139" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.91385412219999995" green="0.51091611390000002" blue="0.93337041139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4B-vg-S9f">
-                                <rect key="frame" x="35" y="1137" width="345" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">This still applies if you are visiting a medical facility. If you are NOT sick, you do not need wear a mask. Facemasks are in short supply and should be saved for caregivers. </string>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1zI-z6-bSe">
+                                        <rect key="frame" x="8" y="8" width="398" height="1040"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Preventing the Spread of COVID-19" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ch-Km-URg" userLabel="ViewSubtitle">
+                                                <rect key="frame" x="26" y="104" width="345" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="21"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SocialDistancing" translatesAutoresizingMaskIntoConstraints="NO" id="4Ag-ch-TRK">
+                                                <rect key="frame" x="26" y="202" width="122" height="135"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="General Health Guidelines:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCh-gb-VIj" userLabel="ViewTitle">
+                                                <rect key="frame" x="6" y="8" width="387" height="88"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="36"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Keep a distance bewteen yourself and others whenever you're not home. Avoid close contact with people who are sick." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVO-JE-I9x">
+                                                <rect key="frame" x="169" y="215" width="202" height="126"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HandWash" translatesAutoresizingMaskIntoConstraints="NO" id="MSX-pO-9G9">
+                                                <rect key="frame" x="26" y="426" width="122" height="135"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFv-72-gZy">
+                                                <rect key="frame" x="174" y="426" width="197" height="135"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Be sure to wash your hands often, especially if you're out in a public place or have been coughing, sneezing, or blowing your nose.</string>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="When washing your hands, ensure that you use both water and soap, and wash for at least 20 seconds." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SW2-uS-hMX">
+                                                <rect key="frame" x="26" y="555" width="345" height="65"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Personal Hygiene is Important!" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1f-k6-Lf4">
+                                                <rect key="frame" x="201" y="384" width="170" height="42"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Practice Social Distancing" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ah8-Cm-non">
+                                                <rect key="frame" x="168" y="179" width="203" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CoverMouth" translatesAutoresizingMaskIntoConstraints="NO" id="jGl-eX-qNo">
+                                                <rect key="frame" x="26" y="671" width="140" height="148"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B97-iO-N2v">
+                                                <rect key="frame" x="174" y="684" width="197" height="135"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Cover your mouth and nose with a tissue when you cough or sneeze or use the inside of your elbow. Throw used tissues in the trash.</string>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Immediately wash your hands with soap and water, and apply a hand sanitizer that contains at least 60% alcohol" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQb-Wd-bqZ">
+                                                <rect key="frame" x="26" y="813" width="345" height="65"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cover Up a Sneeze/Cough" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDM-Ks-6gE">
+                                                <rect key="frame" x="169" y="662" width="202" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MedicalMask" translatesAutoresizingMaskIntoConstraints="NO" id="UEa-95-ZDk">
+                                                <rect key="frame" x="26" y="943" width="140" height="135"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6M-Xh-Z6i">
+                                                <rect key="frame" x="174" y="943" width="197" height="135"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">If you're showing symptom or think you may be sick, wear a mask! This is important because it helps prevent rapid spread of the virus.</string>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wear a Face Mask" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIx-G2-HnX">
+                                                <rect key="frame" x="232" y="921" width="139" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4B-vg-S9f">
+                                                <rect key="frame" x="26" y="1066" width="345" height="96"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">This still applies if you are visiting a medical facility. If you are NOT sick, you do not need wear a mask. Facemasks are in short supply and should be saved for caregivers. </string>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="JZq-tk-RJ0"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="8nN-GV-6Wz"/>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Uee-0j-aNJ"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Guidelines" image="heart.circle.fill" catalog="system" id="ZrD-Cm-als"/>
                     <size key="freeformSize" width="414" height="1300"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+            <point key="canvasLocation" x="-707.24637681159425" y="159.375"/>
+        </scene>
+        <!--Guidelines-->
+        <scene sceneID="9Vx-O8-mpF">
+            <objects>
+                <tableViewController id="pc7-Eg-kln" customClass="GuidelinesTableViewController" customModule="iStaySafe" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uEb-Q2-5n4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="GuidelinesHeaderCell" rowHeight="182" id="clj-B2-nzx">
+                                <rect key="frame" x="0.0" y="28" width="414" height="182"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="clj-B2-nzx" id="Ni9-44-YkH">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="182"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General Health Guidelines:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdf-vY-RFw" userLabel="ViewTitle">
+                                            <rect key="frame" x="20" y="20" width="374" height="86"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="36"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preventing the Spread of COVID-19" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pza-a8-hlT" userLabel="ViewSubtitle">
+                                            <rect key="frame" x="35" y="126" width="344.5" height="25"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="21"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="pza-a8-hlT" firstAttribute="centerX" secondItem="Zdf-vY-RFw" secondAttribute="centerX" id="1GN-fd-V8q"/>
+                                        <constraint firstAttribute="trailing" secondItem="Zdf-vY-RFw" secondAttribute="trailing" constant="20" id="4yA-Dp-wHH"/>
+                                        <constraint firstItem="Zdf-vY-RFw" firstAttribute="leading" secondItem="Ni9-44-YkH" secondAttribute="leading" constant="20" id="F4M-0u-mL8"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="pza-a8-hlT" secondAttribute="bottom" constant="20" id="VjZ-g0-mTc"/>
+                                        <constraint firstItem="Zdf-vY-RFw" firstAttribute="height" secondItem="Ni9-44-YkH" secondAttribute="height" multiplier="0.472527" id="WAd-lA-U63"/>
+                                        <constraint firstItem="Zdf-vY-RFw" firstAttribute="top" secondItem="Ni9-44-YkH" secondAttribute="top" constant="20" id="YXZ-hl-aDa"/>
+                                        <constraint firstItem="pza-a8-hlT" firstAttribute="top" secondItem="Zdf-vY-RFw" secondAttribute="bottom" constant="20" id="Ygs-1R-BbA"/>
+                                        <constraint firstItem="pza-a8-hlT" firstAttribute="width" secondItem="Zdf-vY-RFw" secondAttribute="width" multiplier="0.921123" id="yhz-gm-bjL"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="GuidelineCell" rowHeight="250" id="wqL-tU-a3a" customClass="GuidelinesTableViewCell" customModule="iStaySafe" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="210" width="414" height="250"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wqL-tU-a3a" id="cp8-u8-O5n">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guideline Title" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMf-tg-fFy">
+                                            <rect key="frame" x="20" y="11" width="374" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="right" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytz-F6-tOG">
+                                            <rect key="frame" x="20" y="51.5" width="374" height="178.5"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+                                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lXH-LK-UrD">
+                                            <rect key="frame" x="28" y="51.5" width="125" height="125"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="125" id="Gox-B5-DQp"/>
+                                                <constraint firstAttribute="height" constant="125" id="P0z-eT-P8R"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="ytz-F6-tOG" secondAttribute="trailing" constant="20" id="1a7-72-4Qi"/>
+                                        <constraint firstItem="ytz-F6-tOG" firstAttribute="leading" secondItem="cp8-u8-O5n" secondAttribute="leading" constant="20" id="I7e-Y1-5SM"/>
+                                        <constraint firstAttribute="bottom" secondItem="ytz-F6-tOG" secondAttribute="bottom" constant="20" id="LT1-cT-X64"/>
+                                        <constraint firstItem="lXH-LK-UrD" firstAttribute="top" secondItem="aMf-tg-fFy" secondAttribute="bottom" constant="20" id="TRx-He-7y2"/>
+                                        <constraint firstItem="aMf-tg-fFy" firstAttribute="top" secondItem="cp8-u8-O5n" secondAttribute="topMargin" id="TbD-Gl-Sm9"/>
+                                        <constraint firstItem="lXH-LK-UrD" firstAttribute="leading" secondItem="cp8-u8-O5n" secondAttribute="leadingMargin" constant="8" id="YbY-1H-iZP"/>
+                                        <constraint firstItem="lXH-LK-UrD" firstAttribute="width" secondItem="cp8-u8-O5n" secondAttribute="width" multiplier="0.301932" id="dLi-es-Qe5"/>
+                                        <constraint firstItem="aMf-tg-fFy" firstAttribute="leading" secondItem="cp8-u8-O5n" secondAttribute="leadingMargin" id="mg5-gt-lEU"/>
+                                        <constraint firstItem="ytz-F6-tOG" firstAttribute="top" secondItem="aMf-tg-fFy" secondAttribute="bottom" constant="20" id="rg0-4D-vFd"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="aMf-tg-fFy" secondAttribute="trailing" id="yHi-Ej-dqB"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionTextView" destination="ytz-F6-tOG" id="HlQ-sv-IOd"/>
+                                    <outlet property="graphicImageView" destination="lXH-LK-UrD" id="SiQ-Nj-M3B"/>
+                                    <outlet property="titleLabel" destination="aMf-tg-fFy" id="NeE-Jt-rJE"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pc7-Eg-kln" id="MLV-oY-WJf"/>
+                            <outlet property="delegate" destination="pc7-Eg-kln" id="EuV-I0-BuO"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Guidelines" image="heart.circle.fill" catalog="system" id="9qP-VP-Bnh"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gxx-fR-SAf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.98550724637681" y="172.76785714285714"/>
         </scene>
     </scenes>
     <resources>
@@ -142,5 +260,6 @@
         <image name="HandWash" width="512" height="512"/>
         <image name="MedicalMask" width="512" height="512"/>
         <image name="SocialDistancing" width="512" height="512"/>
+        <image name="heart.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>
