@@ -10,7 +10,7 @@ import UIKit
 
 class PreventionTableViewController: UITableViewController {
     var guidelines: [Guideline] = []
-    var touchCount = 0
+    var touchCount = 5
     
     override func viewDidLoad() {
         super.viewDidLoad()

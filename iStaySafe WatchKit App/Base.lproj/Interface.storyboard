@@ -10,6 +10,13 @@
         <scene sceneID="aou-V4-d1y">
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="iStaySafe_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="left" backgroundImage="HandWash" id="LbJ-Rn-QMo">
+                            <connections>
+                                <action selector="setTimer" destination="AgC-eL-Hgc" id="jZM-xl-UwX"/>
+                            </connections>
+                        </button>
+                    </items>
                     <menu key="menu" id="hZb-vC-6aD">
                         <items>
                             <menuItem title="Start Detection" image="hand.raised.fill" catalog="system" id="SSm-TL-l38">
@@ -61,6 +68,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="HandWash" width="512" height="512"/>
         <image name="hand.raised.fill" catalog="system" width="128" height="124"/>
         <image name="hand.raised.slash.fill" catalog="system" width="128" height="124"/>
     </resources>
