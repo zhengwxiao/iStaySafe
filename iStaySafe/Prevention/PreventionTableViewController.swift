@@ -54,7 +54,7 @@ class PreventionTableViewController: UITableViewController {
             return cell
         } else {
             let guideline = guidelines[indexPath.row]
-            let cell = tableView.dequeueReusableCell(withIdentifier: "PreventionCell") as! GuidelinesTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PreventionCell") as! PreventionTableViewCell
             cell.setGuideline(guideline: guideline)
             
             return cell
