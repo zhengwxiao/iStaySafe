@@ -27,6 +27,8 @@
 		3BE229D324300DA50080F15E /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE229D224300DA50080F15E /* ComplicationController.swift */; };
 		3BE229D524300DA60080F15E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BE229D424300DA60080F15E /* Assets.xcassets */; };
 		3BE7AE802430D99B00D91DF8 /* FaceTouch.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3BE7AE7F2430D99A00D91DF8 /* FaceTouch.mlmodel */; };
+		3BE7AE832430F21600D91DF8 /* PreventionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE7AE822430F21600D91DF8 /* PreventionTableViewController.swift */; };
+		3BE7AE852430F2E000D91DF8 /* PreventionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE7AE842430F2E000D91DF8 /* PreventionTableViewCell.swift */; };
 		3BF3B73224301B6500BCA2CF /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF3B73124301B6500BCA2CF /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +99,8 @@
 		3BE229D624300DA60080F15E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BE229D724300DA60080F15E /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		3BE7AE7F2430D99A00D91DF8 /* FaceTouch.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FaceTouch.mlmodel; sourceTree = "<group>"; };
+		3BE7AE822430F21600D91DF8 /* PreventionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventionTableViewController.swift; sourceTree = "<group>"; };
+		3BE7AE842430F2E000D91DF8 /* PreventionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventionTableViewCell.swift; sourceTree = "<group>"; };
 		3BF3B73124301B6500BCA2CF /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +155,7 @@
 		3BE229A624300DA30080F15E /* iStaySafe */ = {
 			isa = PBXGroup;
 			children = (
+				3BE7AE812430F1F400D91DF8 /* Prevention */,
 				3B06DBC62430903500E53556 /* Guidelines */,
 				3BF3B73024301B2B00BCA2CF /* Notifications */,
 				3BE229A724300DA30080F15E /* AppDelegate.swift */,
@@ -186,6 +191,15 @@
 				3BE229D724300DA60080F15E /* PushNotificationPayload.apns */,
 			);
 			path = "iStaySafe WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		3BE7AE812430F1F400D91DF8 /* Prevention */ = {
+			isa = PBXGroup;
+			children = (
+				3BE7AE822430F21600D91DF8 /* PreventionTableViewController.swift */,
+				3BE7AE842430F2E000D91DF8 /* PreventionTableViewCell.swift */,
+			);
+			path = Prevention;
 			sourceTree = "<group>";
 		};
 		3BF3B73024301B2B00BCA2CF /* Notifications */ = {
@@ -341,6 +355,8 @@
 				3B06DBC12430694900E53556 /* Guideline.swift in Sources */,
 				3BE229A824300DA30080F15E /* AppDelegate.swift in Sources */,
 				3BF3B73224301B6500BCA2CF /* NotificationManager.swift in Sources */,
+				3BE7AE852430F2E000D91DF8 /* PreventionTableViewCell.swift in Sources */,
+				3BE7AE832430F21600D91DF8 /* PreventionTableViewController.swift in Sources */,
 				3BE229AA24300DA30080F15E /* SceneDelegate.swift in Sources */,
 				3B06DBC524307FD000E53556 /* GuidelinesTableViewController.swift in Sources */,
 			);

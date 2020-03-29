@@ -11,8 +11,10 @@ import CoreMotion
 import CoreML
 import WatchKit
 
+// Source: https://medium.com/skafosai/activity-classification-with-create-ml-coreml3-and-skafos-part-2-734f1ea2f6e
+
 struct ModelConstants {
-    static let numOfFeatures = 2
+    static let numOfFeatures = 6
     // Must be the same value you used while training
     static let predictionWindowSize = 100
     // Must be the same value you used while training
@@ -24,7 +26,6 @@ struct ModelConstants {
 class MotionManager {
     let motionManager = CMMotionManager()
     let faceTouch = FaceTouch()
-    private var deviceMotion = Array(repeating: 0.0, count: 6)
     let accX = try? MLMultiArray(
         shape: [ModelConstants.predictionWindowSize] as [NSNumber],
         dataType: MLMultiArrayDataType.double)
@@ -96,17 +97,13 @@ class MotionManager {
                         print("Face touch detected")
                         
                         let delegate = WKExtension.shared().delegate as? ExtensionDelegate
-                        delegate?.notificationManager.scheduleReminders(title: "Don't Touch Your Face!", body: "", delay: 1, id: "FaceTouch")
+                        delegate?.notificationManager.scheduleReminders(title: "Don't Touch Your Face!", body: "", delay: 0.1, id: "FaceTouch")
                     }
                 }
                 // Start a new prediction window from scratch
                 self.currentIndexInPredictionWindow = 0
             }
         }
-    }
-    
-    func deviceMotionData() -> [Double] {
-        return deviceMotion
     }
     
     func activityPrediction() -> String? {
