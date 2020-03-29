@@ -568,7 +568,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XR67F237X8;
-				IBSC_MODULE = iStaySafe_WatchKit_Extension;
+				IBSC_MODULE = "$(PRODUCT_MODULE_NAME";
 				INFOPLIST_FILE = "iStaySafe WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxiao.iStaySafe.watchkitapp;
 				PRODUCT_NAME = iStaySafe;
@@ -587,7 +587,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XR67F237X8;
-				IBSC_MODULE = iStaySafe_WatchKit_Extension;
+				IBSC_MODULE = "$(PRODUCT_MODULE_NAME";
 				INFOPLIST_FILE = "iStaySafe WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxiao.iStaySafe.watchkitapp;
 				PRODUCT_NAME = iStaySafe;
