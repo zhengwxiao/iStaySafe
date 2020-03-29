@@ -41,7 +41,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="182"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General Health Guidelines:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdf-vY-RFw" userLabel="ViewTitle">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General Health Guidelines" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdf-vY-RFw" userLabel="ViewTitle">
                                             <rect key="frame" x="20" y="20" width="374" height="86"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="36"/>
                                             <nil key="highlightedColor"/>
@@ -127,7 +127,7 @@
         <scene sceneID="mJD-wh-73K">
             <objects>
                 <tableViewController id="RTh-Vw-vGs" userLabel="Prevention" customClass="PreventionTableViewController" customModule="iStaySafe" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6uG-dg-vY2">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6uG-dg-vY2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -162,27 +162,27 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PreventionCell" rowHeight="250" id="Kej-09-1L4" customClass="PreventionTableViewCell" customModule="iStaySafe" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PreventionCell" rowHeight="250" id="Kej-09-1L4" customClass="PreventionTableViewCell" customModule="iStaySafe" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="210" width="414" height="250"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kej-09-1L4" id="yWD-a9-skb">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="250"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guideline Title" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n52-58-Dqg">
-                                            <rect key="frame" x="20" y="11" width="374" height="20.5"/>
+                                            <rect key="frame" x="20" y="11" width="355" height="20.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="right" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTX-yu-FJF">
-                                            <rect key="frame" x="20" y="51.5" width="374" height="178.5"/>
+                                            <rect key="frame" x="20" y="51.5" width="343" height="178.5"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
                                             <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0og-Ha-fe6">
-                                            <rect key="frame" x="28" y="51.5" width="125" height="125"/>
+                                            <rect key="frame" x="28" y="51.5" width="115.5" height="125"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="125" id="FwR-Hh-1UX"/>
                                                 <constraint firstAttribute="width" constant="125" id="z4u-xn-5Bc"/>
@@ -206,16 +206,17 @@
                                     <outlet property="descriptionTextView" destination="jTX-yu-FJF" id="fnZ-k9-qop"/>
                                     <outlet property="graphicImageView" destination="0og-Ha-fe6" id="fMj-HJ-jzp"/>
                                     <outlet property="titleLabel" destination="n52-58-Dqg" id="OZU-dg-ryB"/>
+                                    <segue destination="MU4-hC-Fv6" kind="show" id="zWG-hR-Ctr"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="RTh-Vw-vGs" id="SSb-FJ-jwf"/>
-                            <outlet property="delegate" destination="RTh-Vw-vGs" id="ba5-TG-opy"/>
+                            <outlet property="dataSource" destination="RTh-Vw-vGs" id="Mtd-kn-IoW"/>
+                            <outlet property="delegate" destination="RTh-Vw-vGs" id="VVz-SE-2D0"/>
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="" id="xc2-vE-nr3"/>
-                    <navigationItem key="navigationItem" title="Guidelines" id="ZbY-hE-eRU"/>
+                    <navigationItem key="navigationItem" title="Smart Prevention" id="ZbY-hE-eRU"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Zf-Dy-Yck" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -230,21 +231,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DcS-ag-Pnd">
-                                <rect key="frame" x="16" y="81" width="382" height="216"/>
+                                <rect key="frame" x="16" y="125" width="382" height="216"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qih-3D-cj1">
-                                <rect key="frame" x="16" y="52" width="382" height="21"/>
+                                <rect key="frame" x="16" y="96" width="382" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NV-CL-Tns">
-                                <rect key="frame" x="145.5" y="305" width="123" height="33"/>
+                                <rect key="frame" x="145.5" y="349" width="123" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Reset to Default"/>
-                                <connections>
-                                    <action selector="resetPressed:" destination="MU4-hC-Fv6" eventType="touchUpInside" id="4WL-ba-FMp"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -261,16 +259,15 @@
                         <viewLayoutGuide key="safeArea" id="8ta-XB-J06"/>
                     </view>
                     <navigationItem key="navigationItem" title="Set Frequency" id="P5P-Ky-bEb">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="qiW-SZ-oTb">
-                            <connections>
-                                <action selector="savePressed:" destination="MU4-hC-Fv6" id="fnD-6e-0C2"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="qiW-SZ-oTb"/>
                     </navigationItem>
+<<<<<<< HEAD
                     <connections>
                         <outlet property="HourPicker" destination="DcS-ag-Pnd" id="6o5-1f-bVy"/>
                         <outlet property="frequencyPickerView" destination="DcS-ag-Pnd" id="3Xo-rS-rQG"/>
                     </connections>
+=======
+>>>>>>> d2b6cb648e61813877346f80edfb8f428d01f0aa
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dp9-rm-c5k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
