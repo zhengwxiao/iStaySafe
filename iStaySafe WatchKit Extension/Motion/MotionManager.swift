@@ -93,8 +93,10 @@ class MotionManager {
             if (self.currentIndexInPredictionWindow == ModelConstants.predictionWindowSize) {
                 if let output = self.activityPrediction() {
                     if output == "Face" {
+                        print("Face touch detected")
+                        
                         let delegate = WKExtension.shared().delegate as? ExtensionDelegate
-                        delegate?.notificationManager.scheduleReminders(title: "Don't Touch Your Face!", body: "", delay: 1)
+                        delegate?.notificationManager.scheduleReminders(title: "Don't Touch Your Face!", body: "", delay: 1, id: "FaceTouch")
                     }
                 }
                 // Start a new prediction window from scratch

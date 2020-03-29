@@ -9,26 +9,7 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="iStaySafe_WatchKit_App" customModuleProvider="target">
-                    <items>
-                        <label alignment="left" text="Acceleration" numberOfLines="0" id="vcc-tW-0gg">
-                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
-                        </label>
-                        <label alignment="left" text="Rotation" numberOfLines="0" id="0dV-P5-9h5">
-                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
-                        </label>
-                        <button width="1" height="111" alignment="left" title="Capture Motion" id="nAo-jR-auh">
-                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="captureMotionPressed" destination="AgC-eL-Hgc" id="Kfv-do-msK"/>
-                            </connections>
-                        </button>
-                    </items>
-                    <connections>
-                        <outlet property="accelerationLabel" destination="vcc-tW-0gg" id="V7h-Sy-ciD"/>
-                        <outlet property="rotationLabel" destination="0dV-P5-9h5" id="omd-2r-y7j"/>
-                    </connections>
-                </controller>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="iStaySafe_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="220" y="346"/>
         </scene>
