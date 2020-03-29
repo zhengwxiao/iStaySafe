@@ -97,7 +97,7 @@ class MotionManager {
                         print("Face touch detected")
                         
                         let delegate = WKExtension.shared().delegate as? ExtensionDelegate
-                        delegate?.notificationManager.scheduleReminders(title: "Don't Touch Your Face!", body: "", delay: 0.1, id: "FaceTouch")
+                        delegate?.notificationManager.scheduleReminders(title: "Don't Touch Your Face!", body: "", delay: 0.1, id: "FaceTouch", repeats: false)
                     }
                 }
                 // Start a new prediction window from scratch

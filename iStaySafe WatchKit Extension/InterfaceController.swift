@@ -38,6 +38,6 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func setTimer() {
-        extensionDelegate?.notificationManager.scheduleReminders(title: "Hand Washing Timer Has Ended", body: "", delay: 20, id: "HandWash")
+        extensionDelegate?.notificationManager.scheduleReminders(title: "Hand Washing Timer Has Ended", body: "", delay: 20, id: "HandWash", repeats: false)
     }
 }

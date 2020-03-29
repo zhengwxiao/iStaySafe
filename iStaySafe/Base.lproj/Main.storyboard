@@ -251,7 +251,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8ta-XB-J06"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Set Frequency" id="P5P-Ky-bEb">
+                    <navigationItem key="navigationItem" title="Set Hand Washing Reminders" id="P5P-Ky-bEb">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="qiW-SZ-oTb">
                             <connections>
                                 <action selector="setReminder:" destination="MU4-hC-Fv6" id="SGE-67-8TU"/>
@@ -260,7 +260,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="HourPicker" destination="DcS-ag-Pnd" id="6o5-1f-bVy"/>
-                        <outlet property="frequencyPickerView" destination="DcS-ag-Pnd" id="3Xo-rS-rQG"/>
+                        <outlet property="label" destination="qih-3D-cj1" id="KLk-4k-EmW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dp9-rm-c5k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

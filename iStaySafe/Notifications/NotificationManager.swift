@@ -12,7 +12,7 @@ import UserNotifications
 class NotificationManager {
     let notificationCenter = UNUserNotificationCenter.current()
     
-    func scheduleReminders(title: String, body: String, delay: Double, id: String) {
+    func scheduleReminders(title: String, body: String, delay: Double, id: String, repeats: Bool) {
         notificationCenter.removeDeliveredNotifications(withIdentifiers: [id])
         
         notificationCenter.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
@@ -24,7 +24,7 @@ class NotificationManager {
         content.sound = UNNotificationSound.default
            
         // Create the trigger as a repeating event.
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: delay, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: delay, repeats: repeats)
         
         // Create the request
         let request = UNNotificationRequest(identifier: id,

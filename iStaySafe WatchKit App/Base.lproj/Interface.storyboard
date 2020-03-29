@@ -9,9 +9,10 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="iStaySafe_WatchKit_App" customModuleProvider="target">
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="iStaySafe" customModuleProvider="target">
                     <items>
-                        <button width="1" alignment="left" backgroundImage="HandWash" id="LbJ-Rn-QMo">
+                        <button width="136" height="188" alignment="left" title="Hand Washing Timer" id="LbJ-Rn-QMo">
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="setTimer" destination="AgC-eL-Hgc" id="jZM-xl-UwX"/>
                             </connections>
@@ -55,20 +56,19 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="iStaySafe_WatchKit_App" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="iStaySafe" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="iStaySafe_WatchKit_App" customModuleProvider="target"/>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="iStaySafe" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="345"/>
         </scene>
     </scenes>
     <resources>
-        <image name="HandWash" width="512" height="512"/>
         <image name="hand.raised.fill" catalog="system" width="128" height="124"/>
         <image name="hand.raised.slash.fill" catalog="system" width="128" height="124"/>
     </resources>
