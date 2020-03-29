@@ -9,7 +9,22 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="iStaySafe_WatchKit_App" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="iStaySafe_WatchKit_App" customModuleProvider="target">
+                    <menu key="menu" id="hZb-vC-6aD">
+                        <items>
+                            <menuItem title="Start Detection" image="hand.raised.fill" catalog="system" id="SSm-TL-l38">
+                                <connections>
+                                    <action selector="startDetection" destination="AgC-eL-Hgc" id="Bgw-Nm-fsd"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Stop Detection" image="hand.raised.slash.fill" catalog="system" id="wd0-Um-Xru">
+                                <connections>
+                                    <action selector="stopDetection" destination="AgC-eL-Hgc" id="Ghz-tP-1wQ"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="346"/>
         </scene>
@@ -45,4 +60,8 @@
             <point key="canvasLocation" x="468" y="345"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hand.raised.fill" catalog="system" width="128" height="124"/>
+        <image name="hand.raised.slash.fill" catalog="system" width="128" height="124"/>
+    </resources>
 </document>

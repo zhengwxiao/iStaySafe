@@ -28,4 +28,12 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
+    
+    @IBAction func startDetection() {
+        extensionDelegate?.motionManager.startDeviceMotionUpdates()
+    }
+    
+    @IBAction func stopDetection() {
+        extensionDelegate?.motionManager.stopDeviceMotionUpdates()
+    }
 }
