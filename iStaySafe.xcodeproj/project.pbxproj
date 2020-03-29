@@ -115,6 +115,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B06DBC62430903500E53556 /* Guidelines */ = {
+			isa = PBXGroup;
+			children = (
+				3B06DBBE243064D700E53556 /* GuidelinesTableViewCell.swift */,
+				3B06DBC424307FD000E53556 /* GuidelinesTableViewController.swift */,
+				3B06DBC02430694900E53556 /* Guideline.swift */,
+			);
+			path = Guidelines;
+			sourceTree = "<group>";
+		};
 		3BE2299B24300DA30080F15E = {
 			isa = PBXGroup;
 			children = (
@@ -138,12 +148,10 @@
 		3BE229A624300DA30080F15E /* iStaySafe */ = {
 			isa = PBXGroup;
 			children = (
+				3B06DBC62430903500E53556 /* Guidelines */,
 				3BF3B73024301B2B00BCA2CF /* Notifications */,
 				3BE229A724300DA30080F15E /* AppDelegate.swift */,
 				3BE229A924300DA30080F15E /* SceneDelegate.swift */,
-				3B06DBBE243064D700E53556 /* GuidelinesTableViewCell.swift */,
-				3B06DBC424307FD000E53556 /* GuidelinesTableViewController.swift */,
-				3B06DBC02430694900E53556 /* Guideline.swift */,
 				3BE229AD24300DA30080F15E /* Main.storyboard */,
 				3BE229B024300DA40080F15E /* Assets.xcassets */,
 				3BE229B224300DA40080F15E /* LaunchScreen.storyboard */,
