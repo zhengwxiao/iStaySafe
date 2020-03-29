@@ -18,10 +18,10 @@
 		3BE229AF24300DA30080F15E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE229AD24300DA30080F15E /* Main.storyboard */; };
 		3BE229B124300DA40080F15E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BE229B024300DA40080F15E /* Assets.xcassets */; };
 		3BE229B424300DA40080F15E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE229B224300DA40080F15E /* LaunchScreen.storyboard */; };
-		3BE229B924300DA50080F15E /* iStaySafe WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3BE229B824300DA50080F15E /* iStaySafe WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3BE229B924300DA50080F15E /* iStaySafe.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3BE229B824300DA50080F15E /* iStaySafe.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3BE229BF24300DA50080F15E /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE229BD24300DA50080F15E /* Interface.storyboard */; };
 		3BE229C124300DA50080F15E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BE229C024300DA50080F15E /* Assets.xcassets */; };
-		3BE229C824300DA50080F15E /* iStaySafe WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3BE229C724300DA50080F15E /* iStaySafe WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3BE229C824300DA50080F15E /* iStaySafe.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3BE229C724300DA50080F15E /* iStaySafe.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3BE229CD24300DA50080F15E /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE229CC24300DA50080F15E /* InterfaceController.swift */; };
 		3BE229CF24300DA50080F15E /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE229CE24300DA50080F15E /* ExtensionDelegate.swift */; };
 		3BE229D324300DA50080F15E /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE229D224300DA50080F15E /* ComplicationController.swift */; };
@@ -54,7 +54,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				3BE229C824300DA50080F15E /* iStaySafe WatchKit Extension.appex in Embed App Extensions */,
+				3BE229C824300DA50080F15E /* iStaySafe.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,7 +65,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				3BE229B924300DA50080F15E /* iStaySafe WatchKit App.app in Embed Watch Content */,
+				3BE229B924300DA50080F15E /* iStaySafe.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,11 +84,11 @@
 		3BE229B024300DA40080F15E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BE229B324300DA40080F15E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BE229B524300DA40080F15E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3BE229B824300DA50080F15E /* iStaySafe WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iStaySafe WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BE229B824300DA50080F15E /* iStaySafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iStaySafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE229BE24300DA50080F15E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		3BE229C024300DA50080F15E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BE229C224300DA50080F15E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3BE229C724300DA50080F15E /* iStaySafe WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "iStaySafe WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BE229C724300DA50080F15E /* iStaySafe.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iStaySafe.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE229CC24300DA50080F15E /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		3BE229CE24300DA50080F15E /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		3BE229D024300DA50080F15E /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
@@ -142,8 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				3BE229A424300DA30080F15E /* iStaySafe.app */,
-				3BE229B824300DA50080F15E /* iStaySafe WatchKit App.app */,
-				3BE229C724300DA50080F15E /* iStaySafe WatchKit Extension.appex */,
+				3BE229B824300DA50080F15E /* iStaySafe.app */,
+				3BE229C724300DA50080F15E /* iStaySafe.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -241,7 +241,7 @@
 			);
 			name = "iStaySafe WatchKit App";
 			productName = "iStaySafe WatchKit App";
-			productReference = 3BE229B824300DA50080F15E /* iStaySafe WatchKit App.app */;
+			productReference = 3BE229B824300DA50080F15E /* iStaySafe.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
 		3BE229C624300DA50080F15E /* iStaySafe WatchKit Extension */ = {
@@ -258,7 +258,7 @@
 			);
 			name = "iStaySafe WatchKit Extension";
 			productName = "iStaySafe WatchKit Extension";
-			productReference = 3BE229C724300DA50080F15E /* iStaySafe WatchKit Extension.appex */;
+			productReference = 3BE229C724300DA50080F15E /* iStaySafe.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
@@ -530,7 +530,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxiao.iStaySafe.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_NAME = iStaySafe;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -552,7 +552,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxiao.iStaySafe.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_NAME = iStaySafe;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -571,7 +571,7 @@
 				IBSC_MODULE = iStaySafe_WatchKit_Extension;
 				INFOPLIST_FILE = "iStaySafe WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxiao.iStaySafe.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = iStaySafe;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -590,7 +590,7 @@
 				IBSC_MODULE = iStaySafe_WatchKit_Extension;
 				INFOPLIST_FILE = "iStaySafe WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxiao.iStaySafe.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = iStaySafe;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
