@@ -10,6 +10,7 @@ import UIKit
 
 class PreventionTableViewController: UITableViewController {
     var guidelines: [Guideline] = []
+    var touchCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +22,12 @@ class PreventionTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         guidelines = createGuidelines()
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     private func createGuidelines() -> [Guideline] {
-        let guideline1 = Guideline(image: #imageLiteral(resourceName: "TouchFace"), title: "Face Touching Preventer", description: "Stop touching your face with the iStaySafe Apple Watch app.")
-        let guideline2 = Guideline(image: #imageLiteral(resourceName: "HandWash"), title: "Hand Washing Reminders", description: "Set reminders to wash your hands.")
+        let guideline1 = Guideline(image: #imageLiteral(resourceName: "TouchFace"), title: "Face Touching Prevention", description: "You've touched your face \(touchCount) times today! Try to avoid touching your face to prevent harmful germs from entering your body!")
+        let guideline2 = Guideline(image: #imageLiteral(resourceName: "HandWash"), title: "Hand Washing Reminders", description: "Set repeating reminders to wash your hands. Use the Apple Watch app to help you time your hand washing.")
         
         return [guideline1, guideline2]
     }
@@ -58,6 +60,22 @@ class PreventionTableViewController: UITableViewController {
             cell.setGuideline(guideline: guideline)
             
             return cell
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        // Call function when the coressponding row is selected
+        if indexPath.section == 1 {
+            switch indexPath.row {
+            case 0:
+                break
+            case 1:
+                break
+            default:
+                break
+            }
         }
     }
 
