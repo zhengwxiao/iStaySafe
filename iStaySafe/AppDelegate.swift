@@ -11,15 +11,12 @@ import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
-
-
+    let notificationManager = NotificationManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let notificationController = NotificationController()
-        
-        notificationController.notificationCenter.delegate = self
+        notificationManager.notificationCenter.delegate = self
         
         return true
     }

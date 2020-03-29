@@ -10,6 +10,7 @@
 		3B06DBBF243064D700E53556 /* GuidelinesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B06DBBE243064D700E53556 /* GuidelinesTableViewCell.swift */; };
 		3B06DBC12430694900E53556 /* Guideline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B06DBC02430694900E53556 /* Guideline.swift */; };
 		3B06DBC524307FD000E53556 /* GuidelinesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B06DBC424307FD000E53556 /* GuidelinesTableViewController.swift */; };
+		3B06DBC82430908400E53556 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE229D024300DA50080F15E /* NotificationController.swift */; };
 		3BE229A824300DA30080F15E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE229A724300DA30080F15E /* AppDelegate.swift */; };
 		3BE229AA24300DA30080F15E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE229A924300DA30080F15E /* SceneDelegate.swift */; };
 		3BE229AF24300DA30080F15E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE229AD24300DA30080F15E /* Main.storyboard */; };
@@ -21,7 +22,6 @@
 		3BE229C824300DA50080F15E /* iStaySafe WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3BE229C724300DA50080F15E /* iStaySafe WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3BE229CD24300DA50080F15E /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE229CC24300DA50080F15E /* InterfaceController.swift */; };
 		3BE229CF24300DA50080F15E /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE229CE24300DA50080F15E /* ExtensionDelegate.swift */; };
-		3BE229D124300DA50080F15E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE229D024300DA50080F15E /* NotificationController.swift */; };
 		3BE229D324300DA50080F15E /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE229D224300DA50080F15E /* ComplicationController.swift */; };
 		3BE229D524300DA60080F15E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BE229D424300DA60080F15E /* Assets.xcassets */; };
 		3BF3B73224301B6500BCA2CF /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF3B73124301B6500BCA2CF /* NotificationController.swift */; };
@@ -173,9 +173,9 @@
 		3BE229CB24300DA50080F15E /* iStaySafe WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				3BE229D024300DA50080F15E /* NotificationController.swift */,
 				3BE229CC24300DA50080F15E /* InterfaceController.swift */,
 				3BE229CE24300DA50080F15E /* ExtensionDelegate.swift */,
-				3BE229D024300DA50080F15E /* NotificationController.swift */,
 				3BE229D224300DA50080F15E /* ComplicationController.swift */,
 				3BF3B736243027E300BCA2CF /* Motion */,
 				3BE229D424300DA60080F15E /* Assets.xcassets */,
@@ -346,7 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BE229D124300DA50080F15E /* NotificationController.swift in Sources */,
+				3B06DBC82430908400E53556 /* NotificationController.swift in Sources */,
 				3BF3B73824302AB500BCA2CF /* MotionManager.swift in Sources */,
 				3BE229D324300DA50080F15E /* ComplicationController.swift in Sources */,
 				3BE229CF24300DA50080F15E /* ExtensionDelegate.swift in Sources */,

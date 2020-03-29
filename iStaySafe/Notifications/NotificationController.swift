@@ -11,8 +11,7 @@ import Foundation
 import Foundation
 import UserNotifications
 
-class NotificationController: NSObject {
-    static let shared = NotificationController()
+class NotificationManager {
     let notificationCenter = UNUserNotificationCenter.current()
     
     // Transferred to ExensionDelegate
