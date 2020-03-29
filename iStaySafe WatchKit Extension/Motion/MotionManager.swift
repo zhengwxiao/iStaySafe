@@ -12,9 +12,9 @@ import CoreMotion
 class MotionManager {
     let motionManager = CMMotionManager()
     
-    func start() {
+    func startDeviceMotionUpdates() {
         if self.motionManager.isDeviceMotionAvailable {
-            self.motionManager.deviceMotionUpdateInterval = 1.0 / 30.0
+            self.motionManager.deviceMotionUpdateInterval = 1.0
             
             var deviceMotion = Array(repeating: 0.0, count: 6)
             
@@ -29,9 +29,16 @@ class MotionManager {
                 deviceMotion[3] = data.rotationRate.x
                 deviceMotion[4] = data.rotationRate.y
                 deviceMotion[5] = data.rotationRate.z
+                
+                print("Acceleration: \(deviceMotion[0]), \(deviceMotion[1]), \(deviceMotion[2])")
+                print("Rotation: \(deviceMotion[3]), \(deviceMotion[4]), \(deviceMotion[5])")
             }
             
             motionManager.startDeviceMotionUpdates(to: OperationQueue(), withHandler: deviceMotionHandler)
         }
+    }
+    
+    func stopDeviceMotionUpdates() {
+        motionManager.stopDeviceMotionUpdates()
     }
 }

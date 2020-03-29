@@ -9,9 +9,12 @@
 import WatchKit
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
-
+    let motionManager = MotionManager()
+    
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
+        
+        motionManager.startDeviceMotionUpdates()
     }
 
     func applicationDidBecomeActive() {
